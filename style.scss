@@ -1,0 +1,726 @@
+/**************** pre loader ***************/
+
+/*
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+#loader {
+    
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    margin-left: 660px;
+    margin-top: 250px;
+    border-radius: 50%;
+    border: 8px solid transparent;
+    border-top-color: #008080;
+border-radius: 100%;
+    -webkit-animation: spin 2s linear infinite; // Chrome, Opera 15+, Safari 5+ 
+    animation: spin 2s linear infinite; // Chrome, Firefox 16+, IE 10+, Opera 
+
+    z-index: 1001;
+}
+
+    #loader:before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        border-radius: 50%;
+        border: 5px solid transparent;
+        border-top-color: white;
+
+        -webkit-animation: spin 3s linear infinite; // Chrome, Opera 15+, Safari 5+ 
+        animation: spin 3s linear infinite; // Chrome, Firefox 16+, IE 10+, Opera 
+    }
+
+    #loader:after {
+        content: "";
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        right: 40px;
+        bottom: 40px;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        border-top-color: #d8c63f;
+
+        -webkit-animation: spin 1.5s linear infinite; // Chrome, Opera 15+, Safari 5+ 
+          animation: spin 1.5s linear infinite; // Chrome, Firefox 16+, IE 10+, Opera 
+    }
+
+    @-webkit-keyframes spin {
+        0%   { 
+            -webkit-transform: rotate(0deg);  // Chrome, Opera 15+, Safari 3.1+ 
+            -ms-transform: rotate(0deg);  // IE 9 
+            transform: rotate(0deg);  // Firefox 16+, IE 10+, Opera 
+        }
+        100% {
+            -webkit-transform: rotate(360deg);  // Chrome, Opera 15+, Safari 3.1+ 
+            -ms-transform: rotate(360deg);  // IE 9 
+            transform: rotate(360deg);  // Firefox 16+, IE 10+, Opera 
+        }
+    }
+    @keyframes spin {
+        0%   { 
+            -webkit-transform: rotate(0deg);  // Chrome, Opera 15+, Safari 3.1+ 
+            -ms-transform: rotate(0deg);  // IE 9 
+            transform: rotate(0deg);  // Firefox 16+, IE 10+, Opera 
+        }
+        100% {
+            -webkit-transform: rotate(360deg);  // Chrome, Opera 15+, Safari 3.1+ 
+            -ms-transform: rotate(360deg);  // IE 9 
+            transform: rotate(360deg);  // Firefox 16+, IE 10+, Opera 
+        }
+    }
+
+    #loader-wrapper .loader-section {
+        position: fixed;
+        top: 0;
+        width: 51%;
+        height: 100%;
+        background: #222222;
+        z-index: 1000;
+        -webkit-transform: translateX(0);  // Chrome, Opera 15+, Safari 3.1+ 
+        -ms-transform: translateX(0);  // IE 9 
+        transform: translateX(0);  // Firefox 16+, IE 10+, Opera 
+    }
+
+    #loader-wrapper .loader-section.section-left {
+        left: 0;
+    }
+
+    #loader-wrapper .loader-section.section-right {
+        right: 0;
+    }
+
+    ///////// Loaded 
+    .loaded #loader-wrapper .loader-section.section-left {
+        -webkit-transform: translateY(-100%);  // Chrome, Opera 15+, Safari 3.1+ 
+            -ms-transform: translateY(-100%);  // IE 9 
+                transform: translateY(-100%);  // Firefox 16+, IE 10+, Opera 
+
+        -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 0.5);  
+                transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 0.5);
+    }
+
+    .loaded #loader-wrapper .loader-section.section-right {
+        -webkit-transform: translateY(-100%);  // Chrome, Opera 15+, Safari 3.1+ 
+            -ms-transform: translateY(-100%);  // IE 9 
+                transform: translateY(-100%);  // Firefox 16+, IE 10+, Opera 
+
+-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 0.5);  
+        transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 0.5);
+    }
+    
+    .loaded #loader {
+        opacity: 0;
+        -webkit-transition: all 0.3s ease-out;  
+                transition: all 0.3s ease-out;
+        
+    }
+    .loaded #loader-wrapper {
+        visibility: hidden;
+
+        -webkit-transform: translateY(-100%);  // Chrome, Opera 15+, Safari 3.1+ 
+            -ms-transform: translateY(-100%);  // IE 9 
+                transform: translateY(-100%);  // Firefox 16+, IE 10+, Opera 
+
+        -webkit-transition: all 0.3s 1s ease-out;  
+                transition: all 0.3s 1s ease-out;
+    }
+    
+    /// JavaScript Turned Off 
+    .no-js #loader-wrapper {
+        display: none;
+    }
+    .no-js h1 {
+        color: #222222;
+    }
+
+  */
+
+/**************** starting ***************/
+html {
+overflow-x: hidden;    
+font-family: 'Raleway-Thin';    
+margin: 0;
+}
+
+
+h1 {
+font-family: 'Raleway-SemiBold';    
+}
+
+
+
+/**************** header ***************/
+
+#header {
+width:101.5%;
+height: 700px;
+background-image: url(images/portfolio.jpg);
+margin-top:-10px;   
+margin-left:-10px;
+
+    background-attachment: fixed;
+}
+/**************** canvas ***************/
+#canvas1 {
+margin: auto;
+margin-top: -110px;    
+margin-left: -10px;
+margin-right: -10px;
+display: block;
+
+}
+
+/**************** nav ***************/
+
+//parented code together under nav
+
+#nav{
+text-align: center;
+background-color: #eaeaea;
+position: fixed;
+top: 0;
+width: 100%;
+margin-left: -8px;
+font-family: 'Raleway-Light';
+font-size: 20px;
+    
+li{ 
+display: inline-block;
+    padding: 10px;
+    
+} 
+    
+a:link {color: black;
+		text-decoration: none;
+transition: all 1s ease-in-out;}
+    
+li:hover > a {color: rgb(216, 198, 63);
+		text-decoration: none;}
+    
+a:active {background-color: #eaeaea;}
+    
+a:visited {
+color: black;    
+}
+}//ends nav
+
+
+
+	
+
+		
+
+
+
+
+
+/**************** arrow ***************/
+
+.arrow {
+margin-left: 750px;
+
+height: 30px;
+ margin-bottom: 20px;   
+    
+}
+
+/**************** about me ***************/
+
+//parented code together under me
+
+#me {
+width: 50%;
+margin-left: 200px;
+
+    
+u{
+text-decoration:none;
+border-bottom: 1px solid teal;
+}
+
+h1 {
+ color: black;
+
+}
+}//ends me
+
+ 
+
+
+#pic {
+float: right;
+margin-left: 50px;
+    margin-right: -300px;
+margin-top: -50px;
+
+}
+
+#ele {
+width:101.5%;
+height: 500px;
+background-image: url(images/249805.jpg);
+margin-top:-10px;   
+margin-left:-10px;
+
+    background-attachment: fixed;
+}
+
+/**************** Resume ***************/
+
+//parented code together under res
+
+#res{
+text-align: center;
+
+    
+u{
+text-decoration:none;
+border-bottom: 1px solid teal;
+}
+}
+
+
+.res_cov{
+    -webkit-column-count: 2; 
+    -moz-column-count: 2; 
+    column-count: 2;
+    width: 60%;
+    margin-left: 25%;
+    margin-top: 165px;
+    
+}
+
+
+
+
+/**************** Resume button ***************/
+
+//parented code together under cov2 aka resume button
+
+.cov2{
+    background-color:teal;
+    color: #ffffff;
+    width: 50%;
+    padding: 70px;
+    text-align: center;
+    font-size: 40px;
+    margin-left: 400px;
+    margin-top: 80px;
+    
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+
+ 
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+li {
+
+    color: #000000;
+	
+}
+ul {
+	width: 50%;
+    color: #000000;
+	
+}
+}//ends cov2
+
+
+  
+ .cov2:hover{
+    background-color:rgb(216, 198, 63);
+    color: #ffffff;
+    text-align: center;
+    
+}
+
+
+
+/**************** Classes I Took ***************/
+
+//parented code together under freshman year
+
+#fresh{
+padding: 50px;
+margin-left:50px;
+
+li{
+list-style-image: url(images/652780-double-chevron-right-480.png);
+width: 200px;
+}
+}
+
+//parented code together under sophmore year
+
+#soph{
+margin-left: 550px;
+margin-top: -429px;
+
+li{
+list-style-image: url(images/652780-double-chevron-right-480.png);
+width: 200px;
+}
+}
+
+
+//parented code together under junior year
+
+#jun{
+margin-left: 950px;
+margin-top: -364px;
+
+li{
+list-style-image: url(images/652780-double-chevron-right-480.png);
+width: 200px;
+}
+}
+
+
+
+//parented code together under senior year
+
+#sen{
+
+ margin-left: 1350px;
+margin-top: -270px;
+li{
+list-style-image: url(images/652780-double-chevron-right-480.png);
+width: 200px;
+}
+}
+
+
+
+//parented code together under class
+
+#class{
+ text-align: center;
+margin-top: 50px;
+ 
+u{
+text-decoration:none;
+border-bottom: 1px solid teal;
+}
+}
+
+
+#year u{
+text-decoration:none;
+border-bottom: 1px solid teal;
+
+}
+
+
+/**************** Web ***************/
+
+//parented code together under web
+
+#web {
+margin-top: 20px; 
+text-align: center;
+
+u{
+text-decoration:none;
+border-bottom: 1px solid teal;
+
+}
+}
+
+#seperator{
+margin-left: 700px;
+margin-top: 350px; 
+width: 20%;
+}
+
+/**************** Web Work Buttons ***************/
+
+.web_files{
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+    width: 100%;
+    margin-left: 5%;
+    margin-bottom: 3%;
+  
+   
+}
+
+
+//parented code together under web_button
+
+.web_button{
+    background-color:teal;
+    color: #ffffff;
+    width: 60%;
+    padding: 30px;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+    display: inline-block;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    
+ a{
+    text-decoration: none;
+    color: #ffffff;
+}
+li {
+	display: inline;
+    color: #000000;
+    padding: 10px;
+	
+}
+ul {
+    color: #000000;
+	
+}
+
+}
+
+
+
+
+
+.web_button:hover{
+    background-color:#d8c63f;
+    color: #ffffff;
+    text-align: center;
+    font-size: 15px;
+}
+
+
+
+
+
+
+/**************** Photography ***************/
+#seperator2{
+margin-left: 700px;
+margin-top: 50px; 
+width: 20%;
+}
+
+
+//parented code together under photo 
+
+#photo {
+margin-top: 50px; 
+text-align: center;
+    
+u{
+text-decoration:none;
+border-bottom: 1px solid teal;
+
+}
+}
+
+.photographyimg{
+float:right;
+	max-width: 90%;
+    padding: 3%;
+    text-align: center;
+height: 300px;
+overflow-y: auto;
+
+
+}
+
+.photography {
+ display: inline-block;
+width: 300px;
+height: 200px;
+padding: 1px;   
+}
+.vertical{
+width: 200px;
+display: inline-block;
+height: 300px;
+padding: 1px;
+    
+
+}
+
+.photowh{
+	float:right;
+    margin-right: 120px;
+	max-width: 105%;
+    text-align: center;
+  
+}
+
+//put all the classes together, idk why I had different classes but at this point, I am not messing with it, I will at a later time
+
+.photo1, .photo2, .photo3, .photo4, .photo5, .photo6, .photo7, .photo8, .photo9, .photo10, .photo11, .photo12, .photo13, .photo14, .photo15, .photo16, .photo17, .photo18, .photo19{
+display: inline-block;
+
+}
+
+//put all the id's together, idk why I had different id's but at this point, I am not messing with it, I will at a later time
+
+#photo1, #photo2, #photo3, #photo4, #photo5, #photo6, #photo7, #photo8, #photo9, #photo10, #photo11, #photo12, #photo13, #photo14, #photo15, #photo16, #photo17, #photo18, #photo19 {
+display: inline-block;
+
+}
+
+/**************** Footer/Contact ***************/
+
+#seperator3{
+margin-left: 800px;
+margin-top: 50px;
+    margin-bottom: 10px;
+width: 10%;
+}
+
+#footer {
+width:101.5%;
+height: 700px;
+background-image: url(images/LNEgicj.jpg);
+margin-top:-10px;   
+margin-left:-10px;
+
+    background-attachment: fixed;
+}
+/**************** Left Contact ***************/
+
+//parented code together under media 
+
+#media {
+width:625px;
+height: 550px;
+background-color: rgba(0, 0, 0, 0.47);
+margin-left:250px;
+    background-attachment: fixed;
+color:#d8c63f;
+ ;
+
+ul{
+padding: 70px;
+font-size: 30px;
+}
+li{
+padding: 20px;
+list-style-type:none;
+}
+a:link{
+color: white;
+    text-decoration: none;
+font-size: 25px
+}
+a:visited{
+color: white;
+    text-decoration: none;
+
+}
+a:hover{
+color: #d8c63f;
+    text-decoration: none;
+}
+a:active{
+    color:white;
+    text-decoration: none;
+}
+}//ends media
+
+
+//parented code together under med
+
+#med {
+margin-left: 20px;    
+u{
+text-decoration:none;
+color: white;
+border-bottom: 1px solid #d8c63f;
+
+}
+}
+
+
+
+
+
+
+
+
+
+/**************** Right Contact ***************/
+
+#contact {
+width:700px;
+height: 550px;
+background-color: rgba(0, 0, 0, 0.7);
+margin-left:875px;
+    margin-top:-550px;
+    background-attachment: fixed;
+color: #d8c63f;
+
+li{
+padding: 40px;
+list-style-type: none;
+font-size: 25px;
+}
+ul{
+margin-top: 90px;    
+}
+a:link{
+color: white;
+text-decoration: none;
+}
+a:visited{
+color: #d8c63f;
+    text-decoration: none;
+
+}
+a:hover{
+color: white;
+text-decoration: none;
+}
+a:active{
+    color:white;
+text-decoration: none;
+}
+}//ends contact
+
+
+#con {
+margin-left: 20px; 
+margin-top: -60px;
+ 
+u{
+text-decoration:none;
+color: white;
+border-bottom: 1px solid #d8c63f;
+
+}
+}//ends con
+
+
+#address {
+font-size: 25px;
+margin-left: 105px;
+color: white;
+margin-top: -110px;
+}
+
+/**************** scroll thing ***************/
+#nav #home a:hover {
+color: #d8c63f;    
+}
+
