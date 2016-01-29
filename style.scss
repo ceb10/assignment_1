@@ -147,6 +147,26 @@ border-radius: 100%;
 
   */
 
+
+
+//////My Sass Variables//////////
+
+$bPoint: url(images/652780-double-chevron-right-480.png);
+$tBorder :1px solid teal;
+$lightG: #eaeaea;
+$noDec: none;
+$bColor: teal;
+$yBorder: 1px solid #d8c63f;
+
+////My Sass built in function for rgba////
+$color:#000000 ;
+$alpha:0.47 ;
+$alpha2: 0.7;
+
+////My Sass built in function ////
+$must:#d8c63f;
+
+
 /**************** starting ***************/
 html {
 overflow-x: hidden;    
@@ -188,7 +208,7 @@ display: block;
 
 #nav{
 text-align: center;
-background-color: #eaeaea;
+background-color: $lightG;
 position: fixed;
 top: 0;
 width: 100%;
@@ -203,13 +223,13 @@ display: inline-block;
 } 
     
 a:link {color: black;
-		text-decoration: none;
+		text-decoration: $noDec; //No text decoration
 transition: all 1s ease-in-out;}
     
-li:hover > a {color: rgb(216, 198, 63);
-		text-decoration: none;}
+li:hover > a {color: darken($must, 10%);//Other sass built in element, making hover color darker
+		text-decoration: $noDec;} //no text decoration
     
-a:active {background-color: #eaeaea;}
+a:active {background-color: $lightG;}
     
 a:visited {
 color: black;    
@@ -246,8 +266,8 @@ margin-left: 200px;
 
     
 u{
-text-decoration:none;
-border-bottom: 1px solid teal;
+text-decoration:$noDec;//No text decoration
+border-bottom: $tBorder;//border variable
 }
 
 h1 {
@@ -286,8 +306,8 @@ text-align: center;
 
     
 u{
-text-decoration:none;
-border-bottom: 1px solid teal;
+text-decoration:$noDec;//No text docoration variable
+border-bottom: $tBorder;//border variable
 }
 }
 
@@ -310,7 +330,7 @@ border-bottom: 1px solid teal;
 //parented code together under cov2 aka resume button
 
 .cov2{
-    background-color:teal;
+    background-color:$bColor;
     color: #ffffff;
     width: 50%;
     padding: 70px;
@@ -319,14 +339,14 @@ border-bottom: 1px solid teal;
     margin-left: 400px;
     margin-top: 80px;
     
-    -webkit-transition: all .5s ease-in-out;
+     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
 
  
 a{
-    text-decoration: none;
+    text-decoration:$noDec;//No text decoration
     color: #ffffff;
 }
 li {
@@ -361,7 +381,7 @@ padding: 50px;
 margin-left:50px;
 
 li{
-list-style-image: url(images/652780-double-chevron-right-480.png);
+list-style-image: $bPoint;//image of bullet point
 width: 200px;
 }
 }
@@ -373,7 +393,7 @@ margin-left: 550px;
 margin-top: -429px;
 
 li{
-list-style-image: url(images/652780-double-chevron-right-480.png);
+list-style-image: $bPoint;//image of bullet point
 width: 200px;
 }
 }
@@ -386,7 +406,7 @@ margin-left: 950px;
 margin-top: -364px;
 
 li{
-list-style-image: url(images/652780-double-chevron-right-480.png);
+list-style-image: $bPoint;//image of bullet point
 width: 200px;
 }
 }
@@ -400,7 +420,7 @@ width: 200px;
  margin-left: 1350px;
 margin-top: -270px;
 li{
-list-style-image: url(images/652780-double-chevron-right-480.png);
+list-style-image:$bPoint ;//image of bullet point
 width: 200px;
 }
 }
@@ -414,15 +434,15 @@ width: 200px;
 margin-top: 50px;
  
 u{
-text-decoration:none;
-border-bottom: 1px solid teal;
+text-decoration:$noDec;//No text decoration
+border-bottom: $tBorder;//border variable
 }
 }
 
 
 #year u{
-text-decoration:none;
-border-bottom: 1px solid teal;
+text-decoration:$noDec; //No text decoration
+border-bottom: $tBorder;//border variable
 
 }
 
@@ -436,8 +456,8 @@ margin-top: 20px;
 text-align: center;
 
 u{
-text-decoration:none;
-border-bottom: 1px solid teal;
+text-decoration:$noDec;//No text decoration
+border-bottom: $tBorder;
 
 }
 }
@@ -465,7 +485,7 @@ width: 20%;
 //parented code together under web_button
 
 .web_button{
-    background-color:teal;
+    background-color:$bColor;
     color: #ffffff;
     width: 60%;
     padding: 30px;
@@ -479,7 +499,7 @@ width: 20%;
     transition: all .5s ease-in-out;
     
  a{
-    text-decoration: none;
+    text-decoration: $noDec;//No text decoration
     color: #ffffff;
 }
 li {
@@ -526,8 +546,8 @@ margin-top: 50px;
 text-align: center;
     
 u{
-text-decoration:none;
-border-bottom: 1px solid teal;
+text-decoration:$noDec;//No text decoration
+border-bottom: $tBorder;
 
 }
 }
@@ -605,7 +625,7 @@ margin-left:-10px;
 #media {
 width:625px;
 height: 550px;
-background-color: rgba(0, 0, 0, 0.47);
+background-color: rgba($color, $alpha);//Sass built-in function for rgba
 margin-left:250px;
     background-attachment: fixed;
 color:#d8c63f;
@@ -617,25 +637,25 @@ font-size: 30px;
 }
 li{
 padding: 20px;
-list-style-type:none;
+list-style-type:$noDec;// Even tho for text decoration, same none is used
 }
 a:link{
 color: white;
-    text-decoration: none;
+    text-decoration: $noDec;//No text decoration
 font-size: 25px
 }
 a:visited{
 color: white;
-    text-decoration: none;
+    text-decoration: $noDec;//no text decoration
 
 }
 a:hover{
 color: #d8c63f;
-    text-decoration: none;
+    text-decoration: $noDec;//no text decoration
 }
 a:active{
     color:white;
-    text-decoration: none;
+    text-decoration: $noDec;// no text decoration
 }
 }//ends media
 
@@ -645,9 +665,9 @@ a:active{
 #med {
 margin-left: 20px;    
 u{
-text-decoration:none;
+text-decoration:$noDec;//no text decoration
 color: white;
-border-bottom: 1px solid #d8c63f;
+border-bottom: $yBorder;// yellow border variable
 
 }
 }
@@ -665,7 +685,7 @@ border-bottom: 1px solid #d8c63f;
 #contact {
 width:700px;
 height: 550px;
-background-color: rgba(0, 0, 0, 0.7);
+background-color: rgba($color, $alpha2);//Sass built-in function for rgba
 margin-left:875px;
     margin-top:-550px;
     background-attachment: fixed;
@@ -673,7 +693,7 @@ color: #d8c63f;
 
 li{
 padding: 40px;
-list-style-type: none;
+list-style-type: $noDec;// Same none even though for text decoration
 font-size: 25px;
 }
 ul{
@@ -681,20 +701,20 @@ margin-top: 90px;
 }
 a:link{
 color: white;
-text-decoration: none;
+text-decoration: $noDec;//no text decoration
 }
 a:visited{
 color: #d8c63f;
-    text-decoration: none;
+    text-decoration: $noDec;// no text decoration
 
 }
 a:hover{
 color: white;
-text-decoration: none;
+text-decoration: $noDec;// no text decoration
 }
 a:active{
     color:white;
-text-decoration: none;
+text-decoration: $noDec;// no text decoration
 }
 }//ends contact
 
@@ -704,9 +724,9 @@ margin-left: 20px;
 margin-top: -60px;
  
 u{
-text-decoration:none;
+text-decoration:$noDec;// no text decoration
 color: white;
-border-bottom: 1px solid #d8c63f;
+border-bottom: $yBorder;//yellow border variable
 
 }
 }//ends con
