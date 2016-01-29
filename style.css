@@ -155,7 +155,7 @@ h1 {
   font-family: 'Raleway-SemiBold'; }
 
 /**************** header ***************/
-#header {
+#header, #ele, #footer {
   width: 101.5%;
   height: 700px;
   background-image: url(images/portfolio.jpg);
@@ -219,11 +219,7 @@ h1 {
   margin-top: -50px; }
 
 #ele {
-  width: 101.5%;
-  height: 500px;
   background-image: url(images/249805.jpg);
-  margin-top: -10px;
-  margin-left: -10px;
   background-attachment: fixed; }
 
 /**************** Resume ***************/
@@ -300,7 +296,8 @@ h1 {
 
 #class {
   text-align: center;
-  margin-top: 50px; }
+  margin-top: 50px;
+  color: blue; }
   #class u {
     text-decoration: none;
     border-bottom: 1px solid teal; }
@@ -415,11 +412,7 @@ h1 {
   width: 10%; }
 
 #footer {
-  width: 101.5%;
-  height: 700px;
   background-image: url(images/LNEgicj.jpg);
-  margin-top: -10px;
-  margin-left: -10px;
   background-attachment: fixed; }
 
 /**************** Left Contact ***************/

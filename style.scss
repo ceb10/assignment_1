@@ -163,9 +163,18 @@ $color:#000000 ;
 $alpha:0.47 ;
 $alpha2: 0.7;
 
-////My Sass built in function ////
+////My Sass built in function for making my nav hover darker ////
 $must:#d8c63f;
 
+///mixin and include feature///
+//mixin feature, //include in seperator2 id
+@mixin seperator2
+($mLeft:700px ,$mTop:50px , $wid:20%)
+{
+margin-left: $mLeft; 
+margin-top: $mTop; 
+width: $wid;
+}
 
 /**************** starting ***************/
 html {
@@ -176,7 +185,8 @@ margin: 0;
 
 
 h1 {
-font-family: 'Raleway-SemiBold';    
+font-family: 'Raleway-SemiBold';  
+
 }
 
 
@@ -191,7 +201,7 @@ margin-top:-10px;
 margin-left:-10px;
 
     background-attachment: fixed;
-}
+}//Used this for extend feature for the other two backgrounds
 /**************** canvas ***************/
 #canvas1 {
 margin: auto;
@@ -238,13 +248,6 @@ color: black;
 
 
 
-	
-
-		
-
-
-
-
 
 /**************** arrow ***************/
 
@@ -288,11 +291,9 @@ margin-top: -50px;
 }
 
 #ele {
-width:101.5%;
-height: 500px;
+@extend #header; //extend number 1
 background-image: url(images/249805.jpg);
-margin-top:-10px;   
-margin-left:-10px;
+
 
     background-attachment: fixed;
 }
@@ -308,6 +309,7 @@ text-align: center;
 u{
 text-decoration:$noDec;//No text docoration variable
 border-bottom: $tBorder;//border variable
+
 }
 }
 
@@ -374,6 +376,9 @@ ul {
 
 /**************** Classes I Took ***************/
 
+
+
+
 //parented code together under freshman year
 
 #fresh{
@@ -432,7 +437,7 @@ width: 200px;
 #class{
  text-align: center;
 margin-top: 50px;
- 
+ color: blue;
 u{
 text-decoration:$noDec;//No text decoration
 border-bottom: $tBorder;//border variable
@@ -441,6 +446,7 @@ border-bottom: $tBorder;//border variable
 
 
 #year u{
+
 text-decoration:$noDec; //No text decoration
 border-bottom: $tBorder;//border variable
 
@@ -532,10 +538,10 @@ ul {
 
 
 /**************** Photography ***************/
+
+
 #seperator2{
-margin-left: 700px;
-margin-top: 50px; 
-width: 20%;
+@include seperator2;
 }
 
 
@@ -559,7 +565,6 @@ float:right;
     text-align: center;
 height: 300px;
 overflow-y: auto;
-
 
 }
 
@@ -610,11 +615,9 @@ width: 10%;
 }
 
 #footer {
-width:101.5%;
-height: 700px;
+@extend #header; //extend number 2
 background-image: url(images/LNEgicj.jpg);
-margin-top:-10px;   
-margin-left:-10px;
+
 
     background-attachment: fixed;
 }
@@ -691,10 +694,12 @@ margin-left:875px;
     background-attachment: fixed;
 color: #d8c63f;
 
+    
 li{
 padding: 40px;
 list-style-type: $noDec;// Same none even though for text decoration
 font-size: 25px;
+
 }
 ul{
 margin-top: 90px;    
