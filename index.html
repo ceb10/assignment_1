@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BWM355 Final</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/gsap/TweenMax.js"></script> 
+	<script>window.jQuery || document.write('<script src="js/jquery/jquery-1.11.3.js"><\/script>')</script>
+	<script src="js/main.js"></script> 
+    <script src="js/jquery.anchor.js" type="text/javascript"></script>
+    
+    
+ <link rel="stylesheet" type="text/css" href="style.css">    
+</head>
+ <body>
+   
+<div id="loader-wrapper">
+			<div id="loader"></div>
+
+			<div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+
+		</div> 
+     
+    
+
+   
+     <div id="nav">
+     <li><a href="#home" rel="" id="anchor1" class="anchorLink">Home</a></li>      
+     <li><a href="#aboutme" rel="" id="anchor2" class="anchorLink">About Me</a></li>
+     <li><a href="#ele" rel="" id="anchor3" class="anchorLink">Resume</a></li>
+     <li><a href="#classTook" rel="" id="anchor4" class="anchorLink">Classes</a></li>
+     <li><a href="#seperator" rel="" id="anchor5" class="anchorLink">Web Work</a></li>
+     <li><a href="#pho" rel="" id="anchor6" class="anchorLink">Photography</a></li>
+     <li><a href="#contact" rel="" id="anchor7" class="anchorLink">Contact</a></li>
+        </div>
+ 
+     <script>
+     TweenMax.staggerFrom("#nav", 2, {opacity:0, y:-90, delay:4.2, ease:Elastic.easeOut}, 0.2);
+
+     
+     </script>
+     
+  <a name="home" id="home"></a>  
+<div id="header">    
+    </div>    
+   <a name="aboutme" id="aboutme"></a> 
+<script type="text/javascript">
+			window.onload = function() {
+				var canvas = document.getElementById('myCanvas');
+				var context = canvas.getContext("2d");
+                
+     var startX = 0;
+            var startY = 80;
+            var spacing = 10;
+
+            function resizeCanvas(){
+            context.canvas,width = window.innerWidth;
+            
+            context.lineWidth= 10;
+            context.strokeStyle="#008080";
+            context.beginPath();
+            context.moveTo(startX, startY);
+                
+                //draw lines
+            for(var n=0; n<268; n++){
+                
+                var x = startX + ((n+0)*spacing);
+                var y;
+                
+                
+                if(n % 2 == 1){ //if n is even
+                    y =startY +50;
+                }else{//if n is odd
+                    y=startY;
+                    
+                }
+                context.lineTo(x,y);
+            }//end for loop
+            }//end resize
+            resizeCanvas();    
+            
+            
+            context.stroke();
+            
+                
+                
+            };
+                   </script>
+	</head>
+
+	<body>
+        
+<div id="canvas1">
+		<canvas id="myCanvas" width="3000" height="150" >
+            
+		</canvas> 
+    
+        </div>
+    
+
+        
+        
+   <img class="arrow" src="images/arrow3.png"> 
+
+<div id="me">
+    
+      <img id= pic src="images/me.png"> 
+    <h1><u>About Me</u></h1>  
+    
+        <p>My Name is Colleen Elizabeth Bowes and I am currently 21 years old. I was born on May 17, 1994 into a wonderful, huge family. I am currently a junior at Penn College of Technology. I also play soccer here as a Goalie and will continue to do so my senior year. My major is Interactive Media and Web Design.
+    </p>
+       <p>My hobbies include drawing, listening to music, making websites, hanging out with friends, enjoying the outdoors, and eating. I love animals and my favorite animal are Bunnies. If you want to get to know me more, you are more than welcome to come up to me anytime. 
+    
+    
+    </p>
+        </div>
+        <br/>
+        <br/>
+        
+     <img class= "arrow" src="images/arrow4.png">     
+    <br/>
+    <br/>
+<div id="ele">
+    <a name="ele" id="ele"></a>
+    <div id="res_cov">
+    <br/>
+    <h1 id="res"><u>Resume</u></h1> 
+    
+  
+    <div class="cov2">
+        <a href="Colleen%20Bowes%20-resume.docx" target="_blank" title="Colleens Resume">Resume</a>
+        </div>
+        
+    
+        </div>             
+       </div><!--End Ele--> 
+      <a name="classTook" id="classTook"></a>  
+ 
+     <div id="classes">
+         
+     <h1 id="class"><u>Classes</u></h1>
+        <div id="fresh">
+      <h2 id="year"><u>Freshman Year</u></h2>
+
+     <b>Fall Semester</b>
+     <ul>
+     <li>BIM100-01</li>
+     <li>BWM150-02/03</li>
+     <li>CSC124-01/05/07/12/15</li>
+     <li>ENL111-23</li>
+     <li>FYE101-64</li>
+     <li>MTH005-21</li>
+     </ul>
+     <b>Spring Semester</b>
+     <ul>
+    <li>ART102-03</li>
+    <li>ART109-01</li>    
+    <li>ENL201-03</li>     
+    <li>MTH151-02</li>     
+    <li>SPC101-02/06/09</li>     
+         
+     </ul>
+        </div>
+        <div id="soph">
+      <h2 id="year"><u>Sophmore Year</u></h2>
+     <b>Fall Semester</b>
+     <ul>
+     <li>BWM160-01</li>
+     <li>BWM252-98</li>
+     <li>BIM220-01/02</li>
+     <li>FIT172-07</li>
+     <li>MTH172-01</li>
+     <li>PHO150-02</li>
+     </ul>
+     <b>Spring Semester</b>
+     <ul>
+    <li>BWM254-98</li>
+     <li>BWM250-01</li>
+     <li>LAS340-01</li>
+     <li>PSY111-02</li>
+     <li>BIM230-01</li>
+     </ul>
+        </div>
+        <div id="jun">
+      <h2 id="year"><u>Junior Year</u></h2>
+     
+     <b>Fall Semester</b>
+     <ul>
+         
+     <li>ART180-03</li>
+    <li>BWM355-01</li>
+     <li>MCM323</li>
+     <li>MKT240-02</li>
+     <li>SCI155-01</li>
+     </ul>
+      <b>Spring Semester</b>
+     <ul>
+         <li>Not in Junior Year Spring Semester Yet</li>
+     </ul>
+        </div>
+          
+        <div id="sen">
+        
+      <h2 id="year"><u>Senior Year</u></h2> 
+     <ul>
+     <li>Not In Senior Year Yet</li>
+     </ul>
+
+     
+        </div>
+        
+        </div>
+        
+        
+  <script>
+//freshman list
+$("#fresh li").hover(over, out);
+
+function over(){
+  TweenMax.to(this, 0.5, {backgroundColor:"#d8c63f"})
+  TweenMax.to($(this).find("#fresh li"), 0.3, {delay:0.6})
+}
+
+function out(){
+  TweenMax.to(this, 0.5, {backgroundColor:"teal"})
+  TweenMax.to($(this).find("#fresh li"), 0.3, {overwrite:"all"})
+}
+//sophmore list
+      $("#soph li").hover(over, out);
+
+function over(){
+  TweenMax.to(this, 0.5, {backgroundColor:"#d8c63f"})
+  TweenMax.to($(this).find("#soph li"), 0.3, {delay:0.6})
+}
+
+function out(){
+  TweenMax.to(this, 0.5, {backgroundColor:"teal"})
+  TweenMax.to($(this).find("#soph li"), 0.3, {overwrite:"all"})
+}
+//Junior list
+      $("#jun li").hover(over, out);
+
+function over(){
+  TweenMax.to(this, 0.5, {backgroundColor:"#d8c63f"})
+  TweenMax.to($(this).find("#jun li"), 0.3, {delay:0.6})
+}
+
+function out(){
+  TweenMax.to(this, 0.5, {backgroundColor:"teal"})
+  TweenMax.to($(this).find("#jun li"), 0.3, {overwrite:"all"})
+}
+//sen list
+      $("#sen li").hover(over, out);
+
+function over(){
+  TweenMax.to(this, 0.5, {backgroundColor:"#d8c63f"})
+  TweenMax.to($(this).find("#sen li"), 0.3, {delay:0.6})
+}
+
+function out(){
+  TweenMax.to(this, 0.5, {backgroundColor:"teal"})
+  TweenMax.to($(this).find("#sen li"), 0.3, {overwrite:"all"})
+}
+</script>      
+        
+        
+<img id="seperator" src="images/codep-hand-drawn-arrows-black-15.png">
+
+ <h1 id="web"><u>Web Work</u></h1>        
+
+<div class="web_files">
+    
+<div class="web_button">     
+    <a href="http://bwm355.colleenbowes.com/Assignment_3/index.html" target="_blank" title="Boardwalk Paradise">Boardwalk Paradise</a>
+</div>
+ 
+<div class="web_button">     
+    <a href="http://bwm355.colleenbowes.com/Assignment_4/burger_boy/index.html" target="_blank" title="Burger Boy">Burger Boy</a>
+</div>
+ 
+<div class="web_button">     
+    <a href="http://bwm355.colleenbowes.com/Assignment_4/into_the_wind/index.html" target="_blank" title="Into The Wind">Into The Wind</a>
+</div>
+<div class="web_button">     
+    <a href="http://final.colleenbowes.com/" target="_blank" title="PHP Anime Genre">PHP Anime Genre</a>
+</div>
+<div class="web_button">     
+    <a href="http://bwm250.colleenbowes.com/assignment_4/index.php" target="_blank" title="PHP Paper Planes">PHP Paper Planes</a>
+</div>
+<div class="web_button">     
+    <a href="http://bwm252.colleenbowes.com/wp/" target="_blank" title="Mystic Koi Tattoos">Mystic Koi Tattoos</a>
+</div>
+  
+<div class="web_button">     
+    <a href="http://bwm254.colleenbowes.com/final/" target="_blank" title="Erickson">Erickson Landscaping</a>
+</div>
+<div class="web_button">     
+    <a href="http://bwm254.colleenbowes.com/home_page/" target="_blank" title="BWM254">BWM254 HomePage</a>
+</div>
+<div class="web_button">     
+    <a href="http://bwm254.colleenbowes.com/assignments/media_query_1/" target="_blank" title="Media Query">Media Query</a>
+</div>
+
+    
+</div> 
+        
+
+        
+        
+        
+<a name="pho" id="pho"></a> 
+<img id= "seperator2" src="images/arrow2.png">          
+<h1 id="photo"><u>Photography</u></h1> 
+
+<div class="photographyimg">
+<div class="photowh">
+
+
+    <div class="photo2">    
+<div id="photo2"><img class="vertical" src="image/photo2.jpg" alt="Meagan Dosch"></div>
+    </div>
+    <div class="photo3">    
+<div id="photo3"><img class="vertical" src="image/photo3.jpg" alt="Morgan Lutz"></div>
+    </div>
+    <div class="photo4">    
+<div id="photo4"><img class="vertical" src="image/photo4.jpg" alt="Laresa Paden"></div>
+    </div>
+<br/>
+    <div class="photo1"> 
+<div id="photo1"><img class="photography" src="image/photo1.JPG" alt="Morgans Car"></div>
+    </div>
+    <div class="photo5">    
+<div id="photo5"><img class="photography" src="image/photo5.JPG" alt="Jakes Laundry"></div>
+    </div>
+    <div class="photo6">    
+<div id="photo6"><img class="photography" src="image/photo6.JPG" alt="Red Solo Cup"></div>
+    </div>
+    <div class="photo7">    
+<div id="photo7"><img class="photography" src="image/photo7.JPG" alt="plant"></div>
+    </div>
+   
+    <div class="photo9">    
+<div id="photo9"><img class="photography" src="image/photo9.JPG" alt="Soccer"></div>
+    </div>
+    <div class="photo10">    
+<div id="photo10"><img class="photography" src="image/photo10.JPG" alt="Soccer"></div>
+    </div>
+    <div class="photo11">    
+<div id="photo11"><img class="photography" src="image/photo11.JPG" alt="Morgans Dog"></div>
+    </div>
+    <div class="photo12">    
+<div id="photo12"><img class="photography" src="image/photo12.JPG" alt="Soccer"></div>
+    </div>
+    <div class="photo13">    
+<div id="photo13"><img class="photography" src="image/photo13.JPG" alt="Carnival"></div>
+    </div>
+    <div class="photo14">    
+<div id="photo14"><img class="photography" src="image/photo14.JPG" alt="Carnival"></div>
+    </div>
+    <div class="photo15">    
+<div id="photo15"><img class="photography" src="image/photo15.JPG" alt="Carnival"></div>
+    </div>
+    <div class="photo16">    
+<div id="photo16"><img class="photography" src="image/photo16.JPG" alt="Carnival"></div>
+    </div>
+    <div class="photo17">    
+<div id="photo17"><img class="photography" src="image/photo17.JPG" alt="Carnival"></div>
+    </div>
+    <div class="photo18">    
+<div id="photo18"><img class="photography" src="image/photo18.JPG" alt="Carnival"></div>
+    </div>
+    <div class="photo19">    
+<div id="photo19"><img class="photography" src="image/photo19.JPG" alt="Carnival"></div>
+    </div>
+
+
+    </div>
+</div>
+
+
+<img id= "seperator3" src="images/feather.png"> 
+
+<div id="footer"> 
+<br/>
+<br/>
+<br/>
+    
+<div id="media">
+    
+ <h1 id="med"><u>Social Media</u></h1>    
+     <ul>
+         <li>Facebook: <a href="https://www.facebook.com/colleen.bowes.73" target="_blank" title="Colleens Facebook"> Colleen's FaceBook</a></li>
+         <li>Twitter:<a href="https://twitter.com/bowes_colleen" target="_blank" title="Colleens Facebook"> @bowes_colleen</a></li>
+         <li>Instagram:<a href="https://www.instagram.com/mowwglii/" target="_blank" title="Colleens Facebook"> Mowwglii</a></li>
+         <li>Pinterest:<a href="https://www.pinterest.com/LegalCause/" target="_blank" title="Colleens Facebook"> Legal Cause</a></li>
+    
+    
+    
+    </ul> 
+    
+    
+    
+    
+    </div> 
+    
+
+
+    <div id="contact">
+    <h1 id="con"><u>Contact Info</u></h1> 
+    <ul>
+    <li>Phone: <a href="tel:610-555-5555" target="_top">610-555-5555</a></li>    
+    <li>Email: <a href="mailto:colleenbowes566@gmail.com" target="_top">Colleen Bowes</a></li>
+        <li>Address:</li> <li id="address">Williamsport PA, 17701</li>
+    </ul>   
+
+        
+        
+    </div>
+    </div>
+        
+        
+
+  
+        <script>
+ 
+        
+        
+        
+        
+        </script>  
+    
+
+	
+        
+</body>
+</html>
